@@ -1,0 +1,34 @@
+package lesson_7.iterate3;
+import java.util.Comparator;
+public class ItemPriceComparator implements Comparator<Item> { // на месте T - класс Item
+//@Override
+//public int compare(Item item1, Item item2) {
+//// сравниваем товары — более дорогой должен быть дальше в списке
+//if (item1.price > item2.price) {
+//return 1;
+//// более дешёвый — ближе к началу списка
+//} else if (item1.price < item2.price) {
+//return -1;
+//// если стоимость равна, нужно вернуть 0
+//} else {
+//return 0;
+//}
+//}
+///////
+
+@Override
+public int compare(Item item1, Item item2) {
+// сравниваем товары — более полпулярности должен быть дальше в списке
+    if (item1.popularity > item2.popularity) {
+        return 1;
+    // более дешёвый — ближе к началу списка
+    } else if (item1.popularity < item2.popularity) {
+        return -1;
+    // если стоимость равна, нужно вернуть 0
+    } else {
+        return 0;
+    }
+}
+
+
+}
